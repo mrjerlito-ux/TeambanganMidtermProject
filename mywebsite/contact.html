@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <style>
+         *,
+         *::before,
+         *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+         }
+
+         body {
+            background: #0d0d0d;
+            font-family: "Montserrat", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+         }
+
+         nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4rem;
+            height: 72px;
+            background: #0d0d0d;
+            border-bottom: 1px solid #1e1e1e;
+            position: relative;
+         }
+
+         nav::before {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 4rem;
+            width: 40px;
+            height: 2px;
+            background: #c9a96e;
+         }
+
+         .nav-brand {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+         }
+
+         .nav-links {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+         }
+
+         nav a {
+            text-decoration: none;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: #888;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s ease;
+         }
+
+         nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: #c9a96e;
+            transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+         }
+
+         nav a:hover {
+            color: #fff;
+         }
+
+         nav a:hover::after {
+            width: 100%;
+         }
+
+         nav a.active {
+            color: #c9a96e;
+         }
+
+         nav a.active::after {
+            width: 100%;
+         }
+
+         img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+         }
+
+         iframe {
+            width: min(950px, 100%);
+            height: 534px;
+         }
+
+         #container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+            width: min(950px, 100%);
+            padding: 0 1rem;
+         }
+
+         h1 {
+            color: #fff;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 2.5rem;
+            letter-spacing: 0.2em;
+            margin-top: 3rem;
+         }
+
+         h2 {
+            color: wheat;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+            padding: 0 2rem;
+         }
+
+         audio {
+            width: min(950px, 100%);
+            margin: 2rem 0;
+            accent-color: #c9a96e;
+            border-radius: 30px;
+            outline: 1px solid #1e1e1e;
+            filter: invert(1);
+         }
+
+         .demo {
+            margin-top: 6rem;
+            text-align: center;
+            color: #333;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+         }
+      </style>
+   </head>
+   <body>
+      <nav>
+         <span class="nav-brand">TEAMBANGAN</span>
+         <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+         </div>
+      </nav>
+
+      <div>
+         <h2>OUR FAVORITE PLACES <3</h2>
+      </div>
+
+      <div id="container">
+         <a href="https://www.facebook.com/Mr.Jerlito" target="_blank">
+            <img src="places/1000roses.jpg" alt="Jerlito's Hobby" />
+         </a>
+
+         <a href="https://www.facebook.com/icantreatyoubettermanpod" target="_blank">
+            <img src="places/bantayan.jpg" alt="Member 2's Hobby" />
+         </a>
+
+         <a href="https://www.facebook.com/gian.carl.37" target="_blank">
+            <img src="places/tops.webp" alt="Gian Carl's Hobby" />
+         </a>
+      </div>
+
+      <audio src="resources/video.mp3" controls>
+         Your browser does not support the audio element.
+      </audio>
+
+      <iframe
+         src="resources/lifeasanitstudent.mp4"
+         title="YouTube video player"
+         allowfullscreen>
+      </iframe>
+   </body>
+</html>
